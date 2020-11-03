@@ -1,3 +1,1 @@
-Download v2ray and v2ctl, Change new name of v2ray and v2ctl, Bash run.sh.
-
-Deploy "v2ray, Dockerfile, start.sh, web.pb, base.txt" to GitHub.
+GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub
