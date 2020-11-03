@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cylv3
+  name: cylv4
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: cylv3
+      name: cylv4
   template:
     metadata:
       labels:
-        name: cylv3
+        name: cylv4
     spec:
       restartPolicy: Always
       containers:
-        - name: cylv3ku
+        - name: cylv4ku
           image: chunyanlee/cylv3
           ports:
             - containerPort: 3000
@@ -23,13 +23,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: cylv3kurl
+  name: cylv4kurl
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "cylv3kurl"
+  - name: "cylv4kurl"
     port: 3000
   selector:
-    name: cylv3
+    name: cylv4
