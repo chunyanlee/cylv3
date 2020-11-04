@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cylv3
+  name: cylbing
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: cylv3
+      name: cylbing
   template:
     metadata:
       labels:
-        name: cylv3
+        name: cylbing
     spec:
       restartPolicy: Always
       containers:
-        - name: cylv3ku
+        - name: cylvbing
           image: chunyanlee/cylv4
           ports:
             - containerPort: 3000
@@ -29,7 +29,7 @@ metadata:
 spec:
   type: ClusterIP  
   ports:
-  - name: "cylv3kurl"
+  - name: "cylbing"
     port: 3000
   selector:
-    name: cylv3
+    name: cylbing
